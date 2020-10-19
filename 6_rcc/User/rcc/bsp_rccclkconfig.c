@@ -36,7 +36,20 @@ void HSE_SetSysClk(uint32_t RCC_PLLMul_x)
 			
 	}
 	else
-	{
+	{	//HSEµ÷ÓÃÊ§°Ü£¬Ê§°Ü´úÂë
 		
 	}
+}
+
+void MCO_GPIO_Config(void)
+{
+	GPIO_InitTypeDef GPIO_InitStruct;
+	
+	RCC_APB2PeriphClockCmd(MCO_GPIO_CLK, ENABLE);
+
+	GPIO_InitStruct.GPIO_Pin = MCO_GPIO_PIN;
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF_OD;
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
+	
+	GPIO_Init(MCO_GPIO_PORT,&GPIO_InitStruct);
 }

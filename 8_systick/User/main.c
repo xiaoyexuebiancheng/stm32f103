@@ -3,11 +3,12 @@
 #include "bsp_key.h"
 #include "bsp_rccclkconfig.h"
 #include "bsp_exti.h"
+#include "bsp_systick.h"
 
-void Delay(uint32_t count)
-{
-	for(;count!=0;count--);
-}
+//void Delay(uint32_t count)
+//{
+//	for(;count!=0;count--);
+//}
 
 int main()
 {	
@@ -35,10 +36,15 @@ int main()
 //		LED_G(ON);
 //		Delay(0xfffff);
 //	}
-	EXTI_Key_Config();
+//	EXTI_Key_Config();
 	while(1)
 	{
-		
+		LED_G(OFF);
+		SysTick_Delay_ms(1000);
+		LED_G(ON);
+		SysTick_Delay_ms(1000);	
 	}
+
+
 }
 

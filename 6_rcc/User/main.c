@@ -25,6 +25,8 @@ int main()
 //	}
 	HSE_SetSysClk(RCC_PLLMul_9);
 	
+	MCO_GPIO_Config();
+	RCC_MCOConfig(RCC_MCO_SYSCLK);
 	while(1)
 	{
 		LED_G(OFF);
