@@ -369,7 +369,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User;..\User\led;..\User\key;..\User\rcc;..\User\exti;..\User\systick;..\User\usart;..\User\dma_mtm;..\User\dma_mtp</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User;..\User\led;..\User\key;..\User\rcc;..\User\exti;..\User\systick;..\User\usart;..\User\dma_mtm;..\User\dma_mtp;..\User\I2C</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -606,6 +606,11 @@
               <FileName>bsp_dma_mtp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\dma_mtp\bsp_dma_mtp.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\I2C\bsp_i2c.c</FilePath>
             </File>
           </Files>
         </Group>
